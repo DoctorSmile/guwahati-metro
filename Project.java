@@ -103,7 +103,7 @@ class MetroCard
 		   	{
 		   		Bal=rs.getInt("recharge");
 		   	}
-		   	double newBal=Bal+dedAmt;
+		   	double newBal=Bal-dedAmt;
 		   	String q2="update people set recharge="+newBal+" where id="+UniqueId;
 		   	stmt.executeUpdate(q2);
 		   	System.out.println("Your current balance is: "+newBal);
@@ -161,7 +161,7 @@ class Stations
 class Main
 {
 	Scanner s= new Scanner(System.in);
-	String username, password, user1="Nitish", user2="Chinmoy", pass="ProjectMetro";
+	String username, password, user1="Abinash", user2="Hirak",user3="Bipul" pass="ProjectMetro";
 	int count;
 	Stations[] gs_station = new Stations[17];
 	Stations[] zoo_station = new Stations[13];
@@ -232,7 +232,7 @@ class Main
 		username=s.next();
 		System.out.print("\n\t\t\tPassword: ");
 		password=s.next();
-		if((username.equals(user1)||username.equals(user2))&&password.equals(pass))
+		if((username.equals(user1)||username.equals(user2)||USERNAME.equals(user3))&&password.equals(pass))
 			System.out.println("Welcome "+username);
 		else
 		{
